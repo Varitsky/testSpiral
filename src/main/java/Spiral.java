@@ -1,8 +1,8 @@
 import java.lang.reflect.Array;
 
 public class Spiral {
-    public static int height = 5;
-    public static int width = 5;
+    public static int height = 4;
+    public static int width = 4;
 
     public static void main(String[] args) {
 
@@ -10,7 +10,6 @@ public class Spiral {
          * Мы проверяем занята ли ячейка, если пустая - пишем число,
          * если она занята - смещаемся по диагонали на пустую ячейку
          * и переходим к другому циклу
-         * работает только для массивов с четным числом элементов. =/
          */
         int[][] array = new int[width][height];
 
@@ -19,7 +18,7 @@ public class Spiral {
         int j = 0; //X
         int number = 1;
 
-        while (number < (width*height)) {
+        while (number <= (width*height)) {
 
             while (j < height) { // идём вправо X
                 if (array[i][j]==0) {
